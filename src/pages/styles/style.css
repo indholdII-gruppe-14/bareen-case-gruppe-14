@@ -1,5 +1,37 @@
-* {
-  box-sizing: border-box;
+body {
+  font-family: sans-serif;
   margin: 0;
-  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html {
+  /* 🎨 Primary Colors */
+  --primary: #353535;
+
+  /* 🎨 Accent Colors */
+  --accent: #c4f7b1;
+  --highlight: #f56674;
+}
+
+/*********fonts*************/
+
+.asap-condensed-light {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Asap Condensed";
+  font-size: clamp(25px, 5vw, 55px);
+  color: var(--secondary);
+}
+
+p {
+  font-family: "Asap Condensed";
+  font-size: clamp(13px, 1.5vw, 20px);
+  color: var(--primary);
 }
