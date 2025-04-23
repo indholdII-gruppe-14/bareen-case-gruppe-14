@@ -1,0 +1,19 @@
+---
+const { identifier, image, alt, imgContainerName } = Astro.props;
+---
+
+<section class={identifier}>
+  <div id={imgContainerName}>
+    <img src={image} alt=`Image of ${alt}` />
+  </div>
+  <slot />
+</section>
+
+<style>
+  section {
+    img {
+      width: 100%;
+    }
+    height: fit-content;
+  }
+</style>
