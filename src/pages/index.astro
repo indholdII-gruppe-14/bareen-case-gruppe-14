@@ -4,6 +4,7 @@ import Button from "./components/Button.astro";
 import BasicComp2 from "./components/BasicComp2.astro";
 
 import ProductCard from "./components/ProductCard.astro";
+import BasicComp3 from "./components/BasicComp3.astro";
 
 const url = "https://mvntcqlqzbighuvqadvu.supabase.co/rest/v1/bareen-two";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im12bnRjcWxxemJpZ2h1dnFhZHZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzNTU5NDMsImV4cCI6MjA1OTkzMTk0M30.EIv4HMnBt2PuaWp1q32S1u8IwGFxc0fW0mJ4KTJLoMc";
@@ -38,6 +39,15 @@ const data = await request.json();
     <Button variant="dark" style="margin-top:2rem;" text="TICKETS" />
   </BasicComp2>
 
+  <BasicComp3 imgContainerName="img_cont1" identifier="info-section" title="PRACTICAL INFO" image="/assets/Bareenudstillings.webp" alt="exhibit picture">
+    <div style="position:relative;">
+      <h2>PRACTICAL INFO</h2>
+
+      <p>Experience bareen like never before in a brand new clothing exhibit at the Design Museum. Explore the fusion of modern streetwear and cultural design in a curated space. For details on location, dates, and tickets — click the button below.</p>
+
+      <Button variant="secondary" style="position: absolute; bottom: 10%; right: 10%;" text="SEE MORE" />
+    </div>
+  </BasicComp3>
   <section class="feature-products">
     <div class="txt_box">
       <h2>FEATURED PRODUCTS</h2>
@@ -50,25 +60,25 @@ const data = await request.json();
         {data.map((product) => <ProductCard data={product} />)}
       </div>
 
-      <Button variant="light" style="position: absolute; right: 35%; transform: translate(-50%,0%);" text="SHOP MORE BAREEN" />
+      <Button variant="light" style="position: absolute; left: 50%; transform: translate(-50%,0%);" text="SHOP MORE BAREEN" />
     </div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const line = document.getElementById("carousel-line");
+      if (line) {
+        line.addEventListener("mouseenter", () => {
+          line.style.animationPlayState = "paused";
+        });
+
+        line.addEventListener("mouseleave", () => {
+          line.style.animationPlayState = "running";
+        });
+      }
+    });
+  </script>
 </Layout>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const line = document.getElementById("carousel-line");
-    if (line) {
-      line.addEventListener("mouseenter", () => {
-        line.style.animationPlayState = "paused";
-      });
-
-      line.addEventListener("mouseleave", () => {
-        line.style.animationPlayState = "running";
-      });
-    }
-  });
-</script>
 
 <style>
   /* featured products */

@@ -115,3 +115,17 @@ p {
   color: var(--accent);
   text-align: end;
 }
+
+/* info section */
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0rem 8rem;
+  margin-top: 5rem;
+}
+
+#img_cont1 {
+  width: 500px;
+  height: auto;
+}
