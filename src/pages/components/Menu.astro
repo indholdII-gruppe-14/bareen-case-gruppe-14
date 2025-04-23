@@ -1,44 +1,61 @@
 ---
-
 ---
-<head>
-  <img src="./src/headerlogos.svg" alt="designmuseum x bareen logo"></a>
-</head>
-<nav>
-  <ul>
-    <li><a href="/">CONTACT</a></li>
-    <li><a href="/">PRACTICAL INFORMATION</a></li>
-  </ul>
-  <a id="logo" href="/"><img src="./src/headerlogo.svg" alt="designmuseum x bareen logo"></a>   
-  <ul>
-    <li><a href="/">BAREEN EXHIBIT</a></li>
-    <li><a href="/">FEATURED PRODUCTS</a></li>
-  </ul>
-</nav>
+<header id="main-header">
+  <div class="logo_shrink">
+    <img src="./src/headerlogos.svg" alt="designmuseum x bareen logo" />
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="/">CONTACT</a></li>
+      <li><a href="/">PRACTICAL INFORMATION</a></li>
+    </ul>
+    <a id="logo" href="/"><img src="./src/headerlogo.svg" alt="designmuseum x bareen logo" /></a>
+    <ul>
+      <li><a href="/">BAREEN EXHIBIT</a></li>
+      <li><a href="/">FEATURED PRODUCTS</a></li>
+    </ul>
+  </nav>
+</header>
 
 <style>
-  nav {
+  #main-header {
+    position: fixed;
+    top: 0;
     width: 100%;
+    background: white;
+    z-index: 1000;
+  }
+
+  .logo_shrink {
+    height: var(--big-logo-height);
+    overflow: hidden;
+    transition: height 0.4s ease;
+  }
+  :root {
+    --big-logo-height: 290px;
+  }
+  body {
+    padding-top: var(--big-logo-height);
+  }
+  #main-header.scrolled .logo_shrink {
+    height: 0;
+  }
+
+  nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
+    border-bottom: 1px solid #e9e9e9;
   }
 
-  /* #logo {
-    font-style: italic;
-    font-weight: bolder;
-    font-size: larger;
-    text-decoration: none;
-    text-transform: capitalize;
-  } */
-
   ul {
-    list-style: none;
     display: flex;
     gap: 2rem;
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   a {
@@ -46,4 +63,14 @@
     text-decoration: none;
   }
 
+  #logo {
+    margin-left: 1rem;
+  }
 </style>
+
+<script is:inline>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-header')
+      .classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
