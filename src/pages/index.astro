@@ -1,6 +1,7 @@
 ---
 import Layout from "./layouts/Layout.astro";
 import Button from "./components/Button.astro";
+import BasicComp2 from "./components/BasicComp2.astro";
 
 import ProductCard from "./components/ProductCard.astro";
 
@@ -15,13 +16,27 @@ const options = {
 
 const request = await fetch(url, options);
 const data = await request.json();
-
-console.log("data", data);
 ---
 
 <Layout title="forside">
-  <h1>THIS PAGE IS STILL UNDER CONSTRUCTION</h1>
+  <BasicComp2 identifier="intro-section" title="WHY THIS,WHY NOW?">
+    <div class="grid1_1-1">
+      <div class="txt-case">
+        <p>Pairing contemporary design with timeless art, we’re inviting a new generation to experience the past in a way that feels personal, wearable, and relevant. As boundaries blur between style and storytelling, this is more than a collection — it’s a living dialogue between what was, what is, and what’s next.</p>
+      </div>
+      <div></div>
+    </div>
+    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: cover;">
+      <source src="/video/0423.mp4" type="video/mp4" />
+    </video>
+  </BasicComp2>
+  <BasicComp2 identifier="exhibit-section" title="BAREEN DESIGN EXHIBIT">
+    <div>
+      <p>Step into a space where fashion meets artifact — a curated collision of style and story. This exhibit showcases garments reimagined through the lens of art history and cultural memory. A bold reflection on identity, time, and the threads that connect them Acquire tickets at designmuseum.dk below</p>
+    </div>
 
+    <Button variant="dark" style="margin-top:2rem;" text="TICKETS" />
+  </BasicComp2>
 
   <section class="feature-products">
     <div class="txt_box">
@@ -38,20 +53,23 @@ console.log("data", data);
       <Button variant="light" style="position: absolute; right: 35%; transform: translate(-50%,0%);" text="SHOP MORE BAREEN" />
     </div>
   </section>
-
-  <script>
-    const track = document.getElementById("carousel-line");
-    track.addEventListener("mouseenter", () => {
-      track.style.animationPlayState = "paused";
-    });
-    track.addEventListener("mouseleave", () => {
-      track.style.animationPlayState = "running";
-    });
-  </script>
-
-
-
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const line = document.getElementById("carousel-line");
+    if (line) {
+      line.addEventListener("mouseenter", () => {
+        line.style.animationPlayState = "paused";
+      });
+
+      line.addEventListener("mouseleave", () => {
+        line.style.animationPlayState = "running";
+      });
+    }
+  });
+</script>
+
 <style>
   /* featured products */
   .txt_box {
