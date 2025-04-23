@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import Menu from "../components/Menu.astro";
 const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ const { title } = Astro.props;
   <body>
     <Menu />
     <slot />
+    <Footer />
   </body>
 </html>
 
