@@ -18,20 +18,32 @@ html {
 
 /*********fonts*************/
 
-.asap-condensed-light {
-  font-family: "Asap Condensed", sans-serif;
+.work-sans-normal {
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 h2 {
-  font-family: "Asap Condensed";
-  font-size: clamp(25px, 5vw, 55px);
+  font-family: "Work Sans";
+  font-size: 35px;
+  color: var(--secondary);
+}
+
+h3 {
+  font-family: "Work Sans";
+  font-size: clamp(18px, 5vw, 25px);
+  color: var(--secondary);
+}
+
+h4 {
+  font-family: "Work Sans";
+  font-size: 20px;
   color: var(--secondary);
 }
 
 p {
-  font-family: "Asap Condensed";
-  font-size: clamp(13px, 1.5vw, 20px);
+  font-family: "Work Sans";
+  font-size: clamp(13px, 1.5vw, 16px);
   color: var(--primary);
 }
