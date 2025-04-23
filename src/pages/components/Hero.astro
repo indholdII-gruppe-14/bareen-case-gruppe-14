@@ -1,8 +1,44 @@
 ---
 ---
-<article>
-    <img src="./src/heroimg.svg" alt="hero img">
+<article class="hero">
+    <img class="heroimg" src="./src/heroimg.svg" alt="hero img">
+    <div class="herotext">
+    <h1 class="bareen">Experience the founders’ 
+        full story of bareen presented at </h1>
+    <h1 class="dmd">DESIGN MUSEUM DANMARK</h1>
+    </div>
 </article>
+
 <style>
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.herotext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+}
+
+.bareen {
+font-size: 3rem;
+font-weight: 300;
+width: 800px;
+}
 
 </style>
