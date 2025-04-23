@@ -1,10 +1,86 @@
 ---
 import Layout from "./layouts/Layout.astro";
 import Button from "./components/Button.astro";
+import ProductCard from "./components/ProductCard.astro";
+
+const url = "https://mvntcqlqzbighuvqadvu.supabase.co/rest/v1/bareen-two";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im12bnRjcWxxemJpZ2h1dnFhZHZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzNTU5NDMsImV4cCI6MjA1OTkzMTk0M30.EIv4HMnBt2PuaWp1q32S1u8IwGFxc0fW0mJ4KTJLoMc";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const request = await fetch(url, options);
+const data = await request.json();
+
+console.log("data", data);
 ---
 
 <Layout title="forside">
   <h1>THIS PAGE IS STILL UNDER CONSTRUCTION</h1>
 
-  <Button text="TO TOP" variant="secondary" />
+  <section class="feature-products">
+    <div class="txt_box">
+      <h2>FEATURED PRODUCTS</h2>
+      <p>These are the pieces featured in the exhibit.</p>
+    </div>
+    <div class="carousel">
+      <div class="carousel-line" id="carousel-line">
+        {data.map((product) => <ProductCard data={product} />)}
+        {data.map((product) => <ProductCard data={product} />)}
+        {data.map((product) => <ProductCard data={product} />)}
+      </div>
+
+      <Button variant="light" style="position: absolute; right: 35%; transform: translate(-50%,0%);" text="SHOP MORE BAREEN" />
+    </div>
+  </section>
+
+  <script>
+    const track = document.getElementById("carousel-line");
+    track.addEventListener("mouseenter", () => {
+      track.style.animationPlayState = "paused";
+    });
+    track.addEventListener("mouseleave", () => {
+      track.style.animationPlayState = "running";
+    });
+  </script>
 </Layout>
+<style>
+  /* featured products */
+  .txt_box {
+    margin-left: 2rem;
+  }
+  .feature-products {
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .carousel {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-line {
+    display: flex;
+    gap: 1rem;
+    animation: scroll-left 10s linear infinite;
+    margin-bottom: 2rem;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .feature-btn {
+    position: absolute;
+    right: 50%;
+  }
+</style>

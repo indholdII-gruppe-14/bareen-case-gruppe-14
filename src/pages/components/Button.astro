@@ -1,8 +1,8 @@
 ---
-const { text, variant } = Astro.props;
+const { text, variant, style } = Astro.props;
 ---
 
-<button class={variant}>{text}</button>
+<button class={variant} style={style}>{text}</button>
 
 <style>
   button {
@@ -16,6 +16,9 @@ const { text, variant } = Astro.props;
     background-color: var(--highlight);
     text-align: center;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Work Sans";
   }
 
   .secondary {
