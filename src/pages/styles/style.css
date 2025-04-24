@@ -1,6 +1,9 @@
 * {
   margin: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Work Sans", sans-serif;
@@ -29,7 +32,6 @@ html {
 
 h2 {
   font-size: 35px;
-  color: var(--secondary);
   margin-bottom: 2rem;
   color: var(--primary);
 }
@@ -41,14 +43,14 @@ h2::after {
 
 h3 {
   font-size: 30px;
-  color: var(--secondary);
+  color: var(--primary);
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
 h4 {
   font-size: 20px;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 p {
@@ -58,7 +60,6 @@ p {
   font-weight: 300;
   color: var(--primary);
   margin-bottom: 0.5rem;
-  color: var(--primary);
 }
 
 /* BasicComp2 */

@@ -22,7 +22,7 @@ const data = await request.json();
 <Layout title="forside">
   <Hero />
   <BasicComp2 identifier="intro-section" title="WHY THIS,WHY NOW?">
-    <div class="grid1_1-1">
+    <div class="grid1_1-1" id="exhibit">
       <div class="txt-case">
         <p>Pairing contemporary design with timeless art, we’re inviting a new generation to experience the past in a way that feels personal, wearable, and relevant. As boundaries blur between style and storytelling, this is more than a collection — it’s a living dialogue between what was, what is, and what’s next.</p>
       </div>
@@ -37,7 +37,7 @@ const data = await request.json();
       <p>Step into a space where fashion meets artifact — a curated collision of style and story. This exhibit showcases garments reimagined through the lens of art history and cultural memory. A bold reflection on identity, time, and the threads that connect them Acquire tickets at designmuseum.dk below</p>
     </div>
 
-    <Button variant="dark" style="margin-top:2rem;" text="TICKETS" />
+    <Button link="https://designmuseum.dk/vare-kategori/dagsbilletter/" variant="dark" style="margin-top:2rem;" text="TICKETS" />
   </BasicComp2>
 
   <BasicComp3 imgContainerName="img_cont1" identifier="info-section" title="PRACTICAL INFO" image="/assets/Bareenudstillings.webp" alt="exhibit picture">
@@ -46,22 +46,22 @@ const data = await request.json();
 
       <p>Experience bareen like never before in a brand new clothing exhibit at the Design Museum. Explore the fusion of modern streetwear and cultural design in a curated space. For details on location, dates, and tickets — click the button below.</p>
 
-      <Button variant="secondary" style="position: absolute; bottom: 10%; right: 10%;" text="SEE MORE" />
+      <Button link="/info" variant="secondary" style="position: absolute; bottom: 10%; right: 10%;" text="SEE MORE" />
     </div>
   </BasicComp3>
-  <section class="feature-products">
+  <section class="feature-products" id="featured-products">
     <div class="txt_box">
       <h2>FEATURED PRODUCTS</h2>
       <p>These are the pieces featured in the exhibit.</p>
     </div>
-    <div class="carousel">
+    <div class="carousel" id="contact-but">
       <div class="carousel-line" id="carousel-line">
         {data.map((product) => <ProductCard data={product} />)}
         {data.map((product) => <ProductCard data={product} />)}
         {data.map((product) => <ProductCard data={product} />)}
       </div>
 
-      <Button variant="light" style="position: absolute; left: 50%; transform: translate(-50%,0%);" text="SHOP MORE BAREEN" />
+      <Button link="https://bareen.dk/" variant="light" style="position: absolute; left: 50%; transform: translate(-50%,0%);" text="SHOP MORE BAREEN" />
     </div>
   </section>
 
