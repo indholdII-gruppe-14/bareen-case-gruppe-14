@@ -2,7 +2,7 @@
 import Layout from "./layouts/Layout.astro";
 import Button from "./components/Button.astro";
 import BasicComp2 from "./components/BasicComp2.astro";
-
+import Hero from "./components/Hero.astro";
 import ProductCard from "./components/ProductCard.astro";
 import BasicComp3 from "./components/BasicComp3.astro";
 
@@ -20,6 +20,7 @@ const data = await request.json();
 ---
 
 <Layout title="forside">
+  <Hero />
   <BasicComp2 identifier="intro-section" title="WHY THIS,WHY NOW?">
     <div class="grid1_1-1">
       <div class="txt-case">
