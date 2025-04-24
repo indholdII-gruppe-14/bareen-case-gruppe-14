@@ -1,5 +1,7 @@
 ---
+
 ---
+
 <header id="main-header">
   <div class="logo_shrink">
     <img src="/public/assets/headerlogos.svg" alt="designmuseum x bareen logo" />
@@ -8,7 +10,7 @@
   <nav>
     <ul>
       <li><a href="/">CONTACT</a></li>
-      <li><a href="/">PRACTICAL INFORMATION</a></li>
+      <li><a href="/info">PRACTICAL INFORMATION</a></li>
     </ul>
     <a id="logo" href="/"><img src="/public/assets/headerlogo.svg" alt="designmuseum x bareen logo" /></a>
     <ul>
@@ -69,8 +71,7 @@
 </style>
 
 <script is:inline>
-  window.addEventListener('scroll', () => {
-    document.getElementById('main-header')
-      .classList.toggle('scrolled', window.scrollY > 50);
+  window.addEventListener("scroll", () => {
+    document.getElementById("main-header").classList.toggle("scrolled", window.scrollY > 50);
   });
 </script>
