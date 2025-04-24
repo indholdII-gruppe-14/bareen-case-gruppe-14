@@ -33,6 +33,11 @@ h2 {
   margin-bottom: 2rem;
   color: var(--primary);
 }
+h2::before,
+h2::after {
+  content: "·";
+  margin: 0 0.5rem;
+}
 
 h3 {
   font-size: clamp(18px, 5vw, 25px);
