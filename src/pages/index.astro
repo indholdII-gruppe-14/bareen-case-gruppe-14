@@ -1,10 +1,10 @@
 ---
-import Layout from "./layouts/Layout.astro";
-import Button from "./components/Button.astro";
-import BasicComp2 from "./components/BasicComp2.astro";
-import Hero from "./components/Hero.astro";
-import ProductCard from "./components/ProductCard.astro";
-import BasicComp3 from "./components/BasicComp3.astro";
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import BasicComp2 from "../components/BasicComp2.astro";
+import Hero from "../components/Hero.astro";
+import ProductCard from "../components/ProductCard.astro";
+import BasicComp3 from "../components/BasicComp3.astro";
 
 const url = "https://mvntcqlqzbighuvqadvu.supabase.co/rest/v1/bareen-two";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im12bnRjcWxxemJpZ2h1dnFhZHZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzNTU5NDMsImV4cCI6MjA1OTkzMTk0M30.EIv4HMnBt2PuaWp1q32S1u8IwGFxc0fW0mJ4KTJLoMc";
@@ -29,7 +29,7 @@ const data = await request.json();
       <div></div>
     </div>
     <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: cover;">
-      <source src="/video/0423.mp4" type="video/mp4" />
+      <source src="/public/video/0423.mp4" type="video/mp4" />
     </video>
   </BasicComp2>
   <BasicComp2 identifier="exhibit-section" title="BAREEN DESIGN EXHIBIT">
@@ -40,13 +40,13 @@ const data = await request.json();
     <Button link="https://designmuseum.dk/vare-kategori/dagsbilletter/" variant="dark" style="margin-top:2rem;" text="TICKETS" />
   </BasicComp2>
 
-  <BasicComp3 imgContainerName="img_cont1" identifier="info-section" title="PRACTICAL INFO" image="/assets/Bareenudstillings.webp" alt="exhibit picture">
+  <BasicComp3 imgContainerName="img_cont1" identifier="info-section" title="PRACTICAL INFO" image="/public/assets/Bareenudstillings.webp" alt="exhibit picture">
     <div style="position:relative;">
       <h2>PRACTICAL INFO</h2>
 
       <p>Experience bareen like never before in a brand new clothing exhibit at the Design Museum. Explore the fusion of modern streetwear and cultural design in a curated space. For details on location, dates, and tickets — click the button below.</p>
 
-      <Button link="/info" variant="secondary" style="position: absolute; bottom: 10%; right: 10%;" text="SEE MORE" />
+      <Button link="./info" variant="secondary" style="position: absolute; bottom: 10%; right: 10%;" text="SEE MORE" />
     </div>
   </BasicComp3>
   <section class="feature-products" id="featured-products">

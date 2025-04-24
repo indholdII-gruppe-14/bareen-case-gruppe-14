@@ -79,7 +79,7 @@ p {
 }
 
 .intro-section {
-  background-image: url(/assets/BasicComp2Bg.svg);
+  background-image: url(assets/BasicComp2Bg.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ p {
 
 /* exhibit section */
 .exhibit-section {
-  background-image: url(/assets/exhibitBg.svg);
+  background-image: url(assets/exhibitBg.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

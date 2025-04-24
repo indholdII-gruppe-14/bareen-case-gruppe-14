@@ -9,8 +9,8 @@ type Item = {
 };
 
 const { item } = Astro.props as { item: Item };
-import ProductColor from "../components/ProductColor.astro";
-import Layout from "../layouts/Layout.astro";
+import ProductColor from "../../components/ProductColor.astro";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const url = "https://mvntcqlqzbighuvqadvu.supabase.co/rest/v1/bareen-two";
