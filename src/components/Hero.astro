@@ -5,7 +5,7 @@
 <article class="hero">
   <img class="heroimg" src="/assets/heroimg.svg" alt="hero img" />
   <div class="herotext">
-    <h1 class="bareen">Experience the founders’ full story of bareen presented at</h1>
+    <h1 class="bareen">Experience the founders’ full story of <span class="bareen2">bareen<span class="registered">®</span></span> presented at</h1>
     <h1 class="dmd">DESIGN MUSEUM DANMARK</h1>
   </div>
 </article>
@@ -48,5 +48,23 @@
     color: var(--highlight);
     width: 900px;
     text-decoration: underline;
+  }
+
+  .bareen2 {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+    padding: 0;
+    transform: skew(-7deg);
+    color: white;
+  }
+
+  /* kilde: chat gpt */
+  .registered {
+    font-size: 0.4em;
+    vertical-align: super;
+    line-height: 0;
   }
 </style>
