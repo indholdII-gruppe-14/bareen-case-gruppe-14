@@ -67,15 +67,16 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  min-height: 30vh;
-  padding: 20px 30px;
+  padding: 0 30px;
+  padding-top: 20px;
 }
 
 .txt-case {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   height: 100%;
+  position: relative;
 }
 
 .intro-section {
@@ -85,16 +86,47 @@ p {
   background-repeat: no-repeat;
 
   margin: 0rem 8rem;
-  margin-top: 4rem;
+  margin-top: 0;
   padding-top: 40px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: fit-content;
 }
 
 .intro-section h2 {
-  position: absolute;
-  right: 16%;
-  transform: translate(-50%, 0%);
+  margin-top: 4rem;
   color: var(--primary);
+}
+
+.txt-case2 {
+  /* display: flex;
+ flex-direction: column;
+  align-items: center;
+  height: fit-content; */
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  padding-top: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.txt-case2 h3 {
+  grid-area: 1/1;
+  font-size: 40px;
+  z-index: 0;
+  font-weight: bolder;
+  color: #a6db9a4c;
+}
+
+.txt-case2 p {
+  grid-area: 1/1;
+  font-size: 1.25rem;
+  font-weight: bold;
+  justify-self: center;
+  z-index: 1;
 }
 
 /* exhibit section */
