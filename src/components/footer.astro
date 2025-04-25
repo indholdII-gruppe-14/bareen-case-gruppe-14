@@ -2,7 +2,7 @@
 
 ---
 
-<footer class="bg-black text-white py-12 px-6 md:px-16">
+<footer>
   <div class="grid_1-1-1">
     <div>
       <h4>Design Museum Danmark</h4>
@@ -16,21 +16,21 @@
         1260 København K<br />
         Danmark
       </p>
-      <div class="flex gap-4 mt-4">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <img src="/assets/facebook.svg" alt="Facebook" class="w-6 h-6 hover:opacity-80" />
+      <div class="socials_div">
+        <a href="https://facebook.com" aria-label="Facebook">
+          <img src="/assets/facebook.svg" alt="Facebook" />
         </a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img src="/assets/instagram.svg" alt="Instagram" class="w-6 h-6 hover:opacity-80" />
+        <a href="https://instagram.com" aria-label="Instagram">
+          <img src="/assets/Instagram.svg" alt="Instagram" />
         </a>
-        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
-          <img src="/assets/tiktok.svg" alt="TikTok" class="w-6 h-6 hover:opacity-80" />
+        <a href="https://tiktok.com" aria-label="TikTok">
+          <img src="/assets/tiktok.svg" alt="TikTok" />
         </a>
       </div>
     </div>
 
     <div class="midt-logo">
-      <img src="/assets/bareenxDMDlogo2.svg" alt="Design Museum x Bareen" class="w-64 md:w-72" />
+      <img src="/assets/bareenxDMDlogo2.svg" alt="Design Museum x Bareen" />
     </div>
 
     <div>
@@ -45,15 +45,15 @@
         1101 København K<br />
         Danmark
       </p>
-      <div class="flex gap-4 mt-4">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <img src="/assets/facebook.svg" alt="Facebook" class="w-6 h-6 hover:opacity-80" />
+      <div class="socials_div">
+        <a href="https://facebook.com" aria-label="Facebook">
+          <img src="/assets/facebook.svg" alt="Facebook" />
         </a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img src="/assets/instagram.svg" alt="Instagram" class="w-6 h-6 hover:opacity-80" />
+        <a href="https://instagram.com" aria-label="Instagram">
+          <img src="/assets/Instagram.svg" alt="Instagram" />
         </a>
-        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
-          <img src="/assets/tiktok.svg" alt="TikTok" class="w-6 h-6 hover:opacity-80" />
+        <a href="https://tiktok.com" aria-label="TikTok">
+          <img src="/assets/tiktok.svg" alt="TikTok" />
         </a>
       </div>
     </div>
@@ -105,12 +105,18 @@
     padding-bottom: 2rem;
   }
 
-  .midt-logo {
+  .socials_div {
     object-position: center;
     object-fit: cover;
+    gap: 5px;
   }
 
-  img {
+  .socials_div img {
     margin-top: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 </style>
